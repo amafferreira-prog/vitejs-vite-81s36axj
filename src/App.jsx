@@ -984,8 +984,9 @@ function QuestionScreen({go,back,handleMainDone}){
   const q=MAIN_QS[qi];
   const dimI=Math.floor(qi/8);
   const qInD=qi%8;
-  const dim=DIMS[dimI];
-  
+const dim=DIMS[dimI];
+  const goNext=()=>{
+    const newAns={...answers,[q.id]:sv};  
     if(qi<39){
       setQi(qi+1);
       setSv(newAns[MAIN_QS[qi+1].id]??5);
